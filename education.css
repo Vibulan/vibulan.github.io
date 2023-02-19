@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&isplay=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    min-height: 100vh;
+    background-color: #a9c9ff;
+    background-image: linear-gradient(180deg, #0F2027 0%, #2c5364 100%);
+}
+
+.main-header {
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+
+.home {
+    font-size: 2.5rem;
+    color: inherit;
+    text-decoration: none;
+}
+.home:hover {
+    color: #adadad;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-nav a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.main-nav a:hover {
+    color: #adadad;
+}
+
+
+body .container {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+body .container .card {
+    position: relative;
+    width: 70%;
+    height: 700px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+}
+@media screen and (max-width: 300px) {
+  body .container .card {
+    font-size: 12px;
+  }
+}
+
+
+body .container .card .face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .card .face.face1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+body .container .card .face.face1 h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body .container .card .face.face2 {
+  transition: 0.5s;
+  background-image: linear-gradient(40deg, #12c2e9 0%, #c471ed 45%, #f64f59 100%);
+  border-radius: 15px;
+}
+body .container .card .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 4vw;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+body .container .card:hover .face.face2 {
+  height: 60px;
+}
+body .container .card:hover .face.face2 h2 {
+  font-size: 2em;
+}
